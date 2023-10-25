@@ -2,13 +2,19 @@
   "name": "@wimkung-example/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:backend": "nx run backend:build",
+    "start:backend": "nx run backend:serve"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
     "@nestjs/core": "^10.0.2",
+    "@nestjs/mongoose": "^10.0.1",
     "@nestjs/platform-express": "^10.0.2",
+    "@nestjs/terminus": "^10.1.1",
     "axios": "^1.0.0",
+    "mongoose": "^7.6.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
     "tslib": "^2.3.0"

@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: apps/backend/Dockerfile
+    platform: linux/amd64
+    volumes:
+      - .:/app/
+    command: npm run start:backend
+    ports:
+      - '3000:3000'
+  mongo:
+    image: mongo:latest
+    volumes:
+      - ./database/db:/data/db
+    ports:
+      - '27017:27017'
