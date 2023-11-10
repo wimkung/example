@@ -13,6 +13,7 @@ EXPOSE 3000
 
 RUN npm run build:backend
 
+ENTRYPOINT ["node", "dist/apps/backend/main.js"]
 
 FROM --platform=linux/amd64 node:18-alpine AS PRODUCTION
 
