@@ -32,4 +32,5 @@ jobs:
           file: ./apps/backend/Dockerfile
           push: true
           tags: wimkung/example:latest
+          target: PRODUCTION
           labels: ${{ steps.meta.outputs.labels }}
