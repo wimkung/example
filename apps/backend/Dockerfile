@@ -21,6 +21,6 @@ WORKDIR /app
 COPY package*.json .
 RUN npm install --production
 
-COPY --from=DEVELOPMENT /app/dist .
+COPY --from=DEVELOPMENT /app/dist /app/dist
 
 ENTRYPOINT ["node", "dist/apps/backend/main.js"]
